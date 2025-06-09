@@ -1,0 +1,356 @@
+/* /public_html/assets/admin_style.css */
+body.admin-body {
+    font-family: 'IRANSansX', Tahoma, Arial, sans-serif;
+    background-color: #ecf0f1; /* پس زمینه روشن برای کل محتوا */
+    margin: 0;
+    direction: rtl;
+    font-size: 14px; /* فونت پایه برای پنل */
+    color: #34495e; /* رنگ متن اصلی */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+.
+
+.admin-sidebar h3 {
+    text-align: center;
+    color: #1abc9c; /* سبز آبی برای عنوان */
+    margin-bottom: 25px;
+    font-size: 1.6em;
+    font-weight: 600;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #34495e;
+}
+
+.admin-sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.admin-sidebar ul li a {
+    display: block;
+    color: #bdc3c7; /* خاکستری روشن برای لینک‌ها */
+    padding: 15px 25px; /* پدینگ بیشتر */
+    text-decoration: none;
+    border-bottom: 1px solid #34495e;
+    transition: background-color 0.2s ease, color 0.2s ease, padding-right 0.2s ease, border-right-color 0.2s ease;
+    font-size: 0.95em;
+    font-weight: 500; /* کمی ضخیم‌تر */
+}
+
+.admin-sidebar ul li a:hover {
+    background-color: #34495e; /* سرمه‌ای کمی روشن‌تر برای هاور */
+    color: #ffffff;
+    padding-right: 30px;
+}
+
+.admin-sidebar ul li a.active {
+    background-color: #1abc9c;
+    color: #ffffff;
+    font-weight: 600;
+    padding-right: 30px;
+    border-right: 4px solid #f1c40f; /* نوار زرد برای آیتم فعال */
+}
+.admin-sidebar ul li a.active:hover {
+    background-color: #16a085; /* سبز آبی تیره‌تر برای هاور آیتم فعال */
+}
+
+
+.admin-main-content {
+    margin-right: 10px;
+	 width: calc(100% - 250px);
+    padding: 0;
+    transition: margin-right 0.3s ease, width 0.3s ease; /* برای انیمیشن سایدبار */
+    background-color: #ecf0f1;
+}
+
+.admin-top-header {
+    background-color: #ffffff;
+    color: #333;
+    padding: 12px 25px; /* پدینگ کمی کمتر */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #dee2e6;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    position: sticky; /* هدر چسبان */
+    top: 0;
+    z-index: 999;
+}
+.admin-top-header .menu-toggle-btn {
+    display: none; /* در دسکتاپ مخفی */
+    font-size: 1.5em;
+    cursor: pointer;
+    padding: 5px 10px;
+    color: #2c3e50;
+}
+
+.admin-top-header .welcome-message {
+    font-size: 1.05em;
+    color: #34495e;
+}
+.admin-top-header .logout-link a {
+    color: #e74c3c;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9em;
+    padding: 6px 12px;
+    border: 1px solid #e74c3c;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+}
+.admin-top-header .logout-link a:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.admin-container-main {
+    padding: 25px 30px;
+}
+
+.admin-page-content {
+    background-color: #ffffff;
+    padding: 25px 30px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.06);
+    margin-bottom: 30px; /* فاصله از فوتر */
+}
+
+.admin-page-content h2 {
+    margin-top: 0;
+    color: #2c3e50;
+    font-size: 1.7em; /* بزرگتر */
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+/* استایل‌های عمومی برای فرم‌ها و جداول پنل ادمین */
+.message { padding: 15px; margin-bottom: 20px; border-radius: 6px; border: 1px solid transparent; font-size: 0.95em;}
+.message.success { background-color: #d1e7dd; color: #0f5132; border-color: #badbcc; }
+.message.error { background-color: #f8d7da; color: #721c24; border-color: #f5c6cb; }
+
+table.data-table {
+	 width: 100%; border-collapse: collapse; margin-top: 20px; font-size:0.9em; box-shadow: 0 1px 3px rgba(0,0,0,0.05); border-radius: 6px; overflow:hidden; 
+	 }
+.data-table th, .data-table td { border: 1px solid #e0e6ed; padding: 10px 12px; text-align: right; }
+.data-table th { background-color: #f1f3f5; font-weight: 600; color:#343a40; }
+.data-table tr:nth-child(even) { background-color: #fcfdff; }
+.data-table tr:hover { background-color: #f0f8ff; }
+
+.actions a, .actions button { margin-left: 6px; text-decoration: none; padding: 5px 10px; border-radius: 4px; font-size:0.85em; color:white; border:none; cursor:pointer; transition: opacity 0.2s ease; }
+.actions a:hover, .actions button:hover { opacity: 0.85; }
+.btn-edit { background-color: #ffc107; color: #212529;}
+.btn-delete { background-color: #dc3545;}
+.btn-view, .btn-keywords, .btn-info { background-color: #17a2b8;}
+.btn-primary { background-color: #007bff;}
+.btn-success { background-color: #28a745;}
+
+.form-group { margin-bottom: 18px; }
+.form-group label { display: block; margin-bottom: 7px; font-weight: 500; color: #495057; }
+.form-group input[type="text"], .form-group input[type="number"], .form-group input[type="tel"],
+.form-group input[type="password"], .form-group input[type="email"],
+.form-group textarea, .form-group select {
+    width: 100%; padding: 10px 12px; border: 1px solid #ced4da; border-radius: 5px; box-sizing: border-box;
+    font-family: 'IRANSansX', Tahoma, sans-serif; font-size:0.95em; background-color: #fff;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #1abc9c; box-shadow: 0 0 0 0.2rem rgba(26, 188, 156, .25); outline: none;
+}
+.form-group textarea { min-height: 100px; resize: vertical; }
+.form-group small { display: block; margin-top: 6px; font-size: 0.88em; color: #6c757d; line-height: 1.5;}
+.form-group small code { background-color: #e9ecef; padding: 2px 4px; border-radius: 3px; font-size: 0.95em;}
+
+.btn-submit {
+    background-image: linear-gradient(to right, #1abc9c, #16a085);
+    color: white; padding: 12px 25px; border: none; border-radius: 6px; cursor: pointer;
+    font-size: 1.05em; font-family: 'IRANSansX', Tahoma, sans-serif; transition: background-image 0.3s ease;
+}
+.btn-submit:hover { background-image: linear-gradient(to right, #16a085, #138671); }
+.btn-submit:disabled { background-image: none; background-color: #aaa; cursor: not-allowed;}
+
+
+.admin-main-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #34495e; /* همرنگ با سایدبار */
+    color: #bdc3c7;
+    font-size: 0.85em;
+    border-top: 1px solid #4a6075;
+}
+
+/* مدیا کوئری برای موبایل */
+@media (max-width: 768px) {
+    .admin-layout { flex-direction: column; }
+    .admin-sidebar {
+        width: 100%; height: auto; position: static; /* تغییر از fixed */
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        display: none; /* در ابتدا مخفی */
+    }
+
+    .admin-sidebar h3 { margin-top:15px; margin-bottom:15px; font-size:1.3em;}
+    .admin-sidebar ul li a { padding: 12px 20px; font-size:0.95em; text-align:center; border-right:none;}
+    .admin-sidebar ul li a:hover, .admin-sidebar ul li a.active { padding-right: 20px; border-right:none; border-bottom: 3px solid #f1c40f;}
+    
+    .admin-main-content { margin-right: 0; width: 100%; }
+    .admin-top-header { flex-direction: row; justify-content: space-between; padding: 12px 15px; }
+    .admin-top-header .welcome-message { margin-bottom: 0; font-size:1em; display:flex; align-items:center; }
+    .admin-top-header .menu-toggle-btn { display: inline-block; margin-left: 15px; } /* نمایش همبرگر */
+    .admin-container-main { padding: 15px; }
+    .admin-page-content { padding: 20px 15px;}
+    .admin-page-content h2 {font-size:1.4em;}
+}
+
+/* /public_html/assets/admin_style.css */
+
+/* ... (استایل‌های قبلی شما) ... */
+
+table.data-table tbody tr.inactive-row td {
+    background-color: #fde0e0 !important; /* یک رنگ قرمز بسیار روشن یا خاکستری */
+    color: #777 !important; /* رنگ متن کمی محوتر */
+    /* text-decoration: line-through; /* اختیاری: خط روی متن */
+}
+
+table.data-table tbody tr.inactive-row:hover td {
+    background-color: #f9caca !important; /* رنگ هاور برای ردیف‌های غیرفعال */
+}
+
+/* اگر می‌خواهید ردیف‌های پین شده هم در صورت غیرفعال بودن، استایل خاصی بگیرند */
+.php-pinned-row.inactive-row td,
+.user-starred-row.inactive-row td, /* اگر ستاره کاربر هم در پنل ادمین دارید */
+.admin-pinned-row.inactive-row td { /* اگر پین ادمین دارید */
+    background-color: #ffebee !important; /* یک رنگ پایه برای پین شده‌های غیرفعال */
+    /* می‌توانید از opacity هم استفاده کنید */
+    /* opacity: 0.7; */
+}
+
+/* ... (بقیه استایل‌ها) ... */
+
+/* /public_html/assets/admin_style.css */
+.online-users-count-cell {
+    text-align: center !important;
+    font-weight: bold;
+    font-size: 1.2em;
+    color: #28a745; /* سبز */
+}
+
+.live-indicator {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #28a745; /* سبز */
+    border-radius: 50%;
+    margin-left: 8px;
+    animation: pulse-animation 1.5s infinite;
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(40, 167, 69, 0);
+    }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+
+/* وقتی کلاس active اضافه می‌شود، سایدبار نمایش داده شود */
+.admin-sidebar.active {
+    transform: translateX(0);
+}
+.admin-sidebar {
+    width: 250px;
+    background-color: #1e1e2f;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: "IRANSans", sans-serif;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: none; /* پیش‌فرض مخفی */
+    z-index: 999;
+}
+
+/* وقتی کلاس open اضافه شد */
+.admin-sidebar.open {
+    display: block;
+}
+
+/* موبایل: تنظیمات ریسپانسیو */
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 80%;
+        padding: 20px;
+        text-align: right; /* راست‌چین کردن محتوا */
+    }
+}
+
+
+
+
+/* سایدبار دسکتاپ */
+.admin-sidebar {
+    width: 250px;
+    background-color: #1e1e2f;
+    color: #fff;
+    min-height: 100vh;
+    padding: 20px 0;
+    font-family: "IRANSans", sans-serif;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    display: block;
+}
+
+/* محتوای اصلی دسکتاپ با فاصله از سایدبار */
+.admin-main-content {
+    margin-right: 250px; /* فاصله از سمت راست برابر با عرض سایدبار */
+    padding: 20px;
+    /* سایر استایل‌های لازم */
+}
+@media (max-width: 768px) {
+    .admin-sidebar {
+        width: 80%;
+        padding: 20px;
+        text-align: right;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100vh;
+        background-color: #1e1e2f;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+        z-index: 9999;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .admin-sidebar.open {
+        display: block;
+        transform: translateX(0);
+    }
+
+    .admin-main-content {
+        margin: 0; /* اینجا حتما باید صفر باشه */
+        padding: 20px;
+    }
+}
+
